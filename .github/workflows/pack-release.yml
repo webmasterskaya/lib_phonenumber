@@ -40,16 +40,16 @@ jobs:
         run: composer install --prefer-source --no-dev --no-progress --optimize-autoloader
 
       - name: Setup run permissions
-        run: sudo chmod +x ./joomla/build.sh
+        run: sudo chmod +x ./joomla/build/build.sh
 
       - name: Run build script
         run: |
           export TERM=xterm
-          ./joomla/build.sh
+          ./joomla/build/build.sh
           ls -l
 
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
-          name: my-artifact
-          path: ./joomla/pkg_phonenumber.zip
+          name: pkg_phonenumber.zip
+          path: ./joomla/build/pkg_phonenumber.zip
