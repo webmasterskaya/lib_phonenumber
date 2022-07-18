@@ -1,6 +1,7 @@
 name: Create package for install to Joomla
 
 on:
+  workflow_dispatch:
   release:
     types: [ published ]
 
