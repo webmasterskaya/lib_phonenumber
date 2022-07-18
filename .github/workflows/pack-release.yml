@@ -46,7 +46,6 @@ jobs:
         run: |
           export TERM=xterm
           ./joomla/build/build.sh
-          ls -l
 
       - name: Upload artifact
         uses: softprops/action-gh-release@v1
